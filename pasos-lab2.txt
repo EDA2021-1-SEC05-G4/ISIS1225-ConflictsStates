@@ -1,0 +1,61 @@
+# Pasos lab 2
+
+Instalar la extension  de VSCode git graph
+
+
+0) Revisar que los permisos en org este para que los miembors puedan hacer push
+Settings/Member priviledges
+Write
+
+1) Fork repo a organizacion
+https://github.com/ISIS1225DEVS/ISIS1225-SampleConflicts
+
+# Cambiar nombre a:
+LabConflicts-S02-G01
+
+2) Clonar repo
+
+3) Crear ramas
+
+#SOLO Est-1
+git branch Est-1
+git checkout Est-1
+git push
+
+#SOLO Est-2
+git branch Est-2
+git checkout Est-2
+git push
+
+4a) (Estudiante 1) Modificar carga de archivos en Est-1
+commit -m "cambios del Estudiante 1"
+git push
+
+4b) (Estudiante 2) Modificar carga de archivos en Est-2
+commit -m "cambios del Estudiante 2"
+git push
+
+4c) Modificar el menú en el View en main
+commit -m "cambios en main"
+git push
+
+
+5)
+5a) (Estudiante 2) Integrar rama Est-1 con main
+git fetch --all
+git checkout main
+git merge Est-1
+#merge conflict
+git commit
+
+5b: (Estudiante 1) Integrar rama Est-2 con main
+git fetch --all
+git checkout main
+git merge Est-2
+#merge conflict
+git commit
+
+
+6)
+git fetch --all
+git commit -m "cambios finales"
